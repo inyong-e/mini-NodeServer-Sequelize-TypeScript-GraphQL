@@ -18,4 +18,4 @@ server.applyMiddleware({ app, path: "/graphql" });
 
 const httpServer = createServer(app);
 
-httpServer.listen({ port: 4000 }, (): void => console.log("server start"));
+httpServer.listen({ port: 8000 }, (): void => console.log("server start"));
