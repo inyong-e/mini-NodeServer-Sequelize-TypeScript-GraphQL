@@ -1,5 +1,5 @@
 import { IResolvers } from "graphql-tools";
-import { admins } from "./Admin";
+import { admin } from "./Admin";
 
 const resolverMAP: IResolvers = {
   Query: {
@@ -8,7 +8,7 @@ const resolverMAP: IResolvers = {
     },
 
     // Admin
-    admins
+    admin
   }
 };
 

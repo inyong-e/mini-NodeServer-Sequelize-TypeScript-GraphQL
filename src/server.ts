@@ -4,8 +4,28 @@ import depthLimit from "graphql-depth-limit";
 import { createServer } from "http";
 import compression from "compression";
 import cors from "cors";
+import { Sequelize } from "sequelize-typescript";
 
 import schema from "./schema";
+
+const sequelize = new Sequelize({
+  database: "trevari",
+  dialect: "postgres",
+  username: "jeong-in-yong",
+  password: "trevari",
+  storage: ":memory:",
+  port: 5432,
+  models: [__dirname + "/models"],
+  modelMatch: (filename, member) => {
+    return (
+      filename.substring(0, filename.indexOf(".model")) === member.toLowerCase()
+    );
+  }
+});
+
+sequelize.authenticate().then(() => {
+  console.log("good~!");
+});
 
 const app = express();
 const server = new ApolloServer({
