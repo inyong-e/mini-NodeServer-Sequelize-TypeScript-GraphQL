@@ -26,8 +26,7 @@
     "@types/graphql-depth-limit": "^1.1.2",
     "@types/node": "^13.9.1",
     "graphql-depth-limit": "^1.1.0",
-    "graphql-import": "^1.0.0-beta.2",
-    "graphql-import-node": "0.0.4"
+    "graphql-import": "^0.4.3"
   },
   "scripts": {
     "start": "node 'dist/server.js'",

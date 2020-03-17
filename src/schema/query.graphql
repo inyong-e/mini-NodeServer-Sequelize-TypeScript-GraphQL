@@ -1,0 +1,6 @@
+# import Admin from "admin.graphql"
+
+type Query {
+  helloWorld: String!
+  admin: Admin
+}
