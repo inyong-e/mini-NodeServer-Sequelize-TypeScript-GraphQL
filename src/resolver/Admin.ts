@@ -1,7 +1,7 @@
-import { test } from "../controller/admin";
+import Admin from "../controller/admin";
 
-const admin = async (_: void, args: void) => {
-  return await test();
+const admins = async (_: void, args: void) => {
+  return await Admin.getItems();
 };
 
-export { admin };
+export { admins };

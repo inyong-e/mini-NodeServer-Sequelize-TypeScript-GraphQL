@@ -2,5 +2,5 @@
 
 type Query {
   helloWorld: String!
-  admin: Admin
+  admins: [Admin]
 }
