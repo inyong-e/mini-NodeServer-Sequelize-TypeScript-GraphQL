@@ -5,14 +5,15 @@ import { createServer } from "http";
 import compression from "compression";
 import cors from "cors";
 import { Sequelize } from "sequelize-typescript";
+require("dotenv").config();
 
 import schema from "./schema";
 
 const sequelize = new Sequelize({
-  database: "trevari",
+  database: process.env.DB_NAME,
   dialect: "postgres",
-  username: "jeong-in-yong",
-  password: "trevari",
+  username: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
   storage: ":memory:",
   port: 5432,
   models: [__dirname + "/models"],
